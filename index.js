@@ -210,9 +210,9 @@ const glossaryArray =[
      }, {
          term:"Tor" , definition:"Tor is a decentralized network that anonymizes users' web traffic by encrypting it and routing it through a series of relays before it reaches its final destination."
      }, {
-         Term:"Transaction" , definition:"The value of cryptocurrency moved from one entity to another on a blockchain network."
+         term:"Transaction" , definition:"The value of cryptocurrency moved from one entity to another on a blockchain network."
      }, {
-         term:"Trading Volume" , definition:`Trading volume refers to the total number of shares (or tokens/coins) that have been exchanged between buyers and sellers of a given asset during trading hours of a certain day.`
+         term:"Trading Volume" , definition:`Trading volume refers to the total number of shares ( tokens or coins) that have been exchanged between buyers and sellers of a given asset during trading hours of a certain day.`
      }, {
         term:"Utility Token" , definition:"Tokens that are designed specifically to be able to help people use something." 
      },{
@@ -223,66 +223,67 @@ const glossaryArray =[
         term:"White Paper" , definition:"A detailed explanation of a cryptocurrency, designed to offer satisfactory technical information, explain the purpose of the coin and set out a roadmap for how it plans to succeed. It\’s designed to convince investors that it\’s a good choice ahead of an ICO." 
      }]
 let oldArray = [
-    {name:"Aave" , img:"images2/aave-logo.png"},
-    {name:"Algorand" , img:`"images2/algorand.png" style="background-color:white"`},
-    {name:"Avalanche" , img:"images2/avalanche-logo.png"},
-    {name:"Axie Infinity" , img:"images2/axie-infinity-logo.png"},
-    {name:"Binance" , img:"images2/binance-logo.png"},
-    {name:"Bitcoin Cash" , img:"images2/bitcoin-cash-logo.png"},
-    {name:"Bitcoin" , img:"images2/bitcoin-logo.png"},
-    {name:"Bnb" , img:"images2/bnb-logo.png"},
-    {name:"Cardano" , img:"images2/cardano-logo.png"},
-    {name:"Chainlink" , img:"images2/chainlink-logo.png"},
-    {name:"Cosmos" , img:"images2/cosmos-logo.png"},
-    {name:"Crypto.com Coin" , img:"images2/crypto-com-coin-logo.png"},
-    {name:"Dai" , img:"images2/dai-logo.png"} ,
-    {name:"Decentraland" , img:"images2/decentraland-logo.png"},
-    {name:"DistrictOx" , img:"images2/district.png"},
-    {name:"Dogecoin" , img:"images2/dogecoin-logo.png"},
-    {name:"Elrond" , img:`"images2/elrond-logo.png" style="background-color:white"`},
-    {name:"Eos" , img:`"images2/eos-logo.png" style="background-color:white"`},
-    {name:"Ethereum Classic" , img:"images2/ethereum-classic-logo.png"},
-    {name:"Filecoin" , img:"images2/filecoin-logo.png"},
-    {name:"Flow" , img:"images2/flow-logo.png"},
-    {name:"Ftx" , img:"images2/ftx-logo.png"},
-    {name:"Hedera" , img:"images2/hedera-logo.png"},
-    {name:"Helium" , img:"images2/helium-logo.png"},
-    {name:"Huobi" , img:"images2/huobi-logo.png"},
-    {name:"Internet Computer" , img:"images2/internet-computer-logo.png"},
-    {name:"Klaytn" , img:"images2/klaytn-logo.png"},
-    {name:"Kucoin Token" , img:"images2/kucoin-logo.png"},
-    {name:"Litecoin" , img:"images2/litecoin-logo.png"},
-    {name:"Maker" , img:"images2/maker-logo.png"},
-    {name:"Monero" , img:"images2/monero-logo.png"},
-    {name:"Near" , img:`"images2/near-logo.png" style="background-color:white"`},
-    {name:"Polkadot" , img:"images2/polkadot-logo.png"},
-    {name:"Polygon" , img:"images2/polygon-logo.png"},
-    {name:"Shiba inu" , img:"images2/shiba-inu-logo.png"},
-    {name:"Solana" , img:"images2/solana-logo.png"},
-    {name:"Stellar" , img:`"images2/stellar-logo.png" style="background-color:white"`},
-    {name:"Tether" , img:"images2/tether-logo.png"},
-    {name:"Tezos" , img:"images2/tezos-logo.png"},
-    {name:"The Sandbox" , img:"images2/the-sandbox-logo.png"},
-    {name:"Theta Network" , img:"images2/theta-network-logo.png"},
-    {name:"Tron" , img:"images2/tron-logo.png"},
-    {name:"TrueUSD" , img:"images2/trueusd-logo.png"},
-    {name:"Uniswap" , img:"images2/uniswap-logo.png"},
-    {name:"Unus Sed Leo" , img:"images2/unus-sed-leo-logo.png"},
-    {name:"USD Coin" , img:"images2/usd-coin-logo.png"},
-    {name:"Vechain" , img:"images2/vechain-logo.png"},
-    {name:"Wrapped Bitcoin" , img:"images2/wrapped-bitcoin-logo.png"},
-    {name:"XRP" , img:"images2/xrp-logo.png"},
-    {name:"Zcash" , img:"images2/zcash-logo.png"}
-]
+    {name:"Aave" , img:"images2/aave-logo.png", description: "AAVE is a decentralized finance platform where users can borrow a range of crypto currencies , as well as lend assets in exchange for interest payments. All without needing a middleman. ", founder: "Stani Kulechov" , whitePaper:"https://github.com/aave/aave-protocol/blob/master/docs/Aave_Protocol_Whitepaper_v1_0.pdf", released: "11/2017" , symbol:"AAVE"  },
+    {name:"Algorand" , img:"images2/algorand.png", description:"Algorand is an open-source, payments-focused blockchain network that aims to solve one of the most persistent problems facing cryptocurrency: scalability. To do that, Algorand employs a novel, more scalable form of “proof-of-stake,” a consensus mechanism that’s critical for securing blockchains and making sure no one can create new tokens out of thin air that they didn’t earn. " , founder:"Silvio Micali", whitePaper:"https://arxiv.org/abs/1607.01341", released:"06/2019", symbol:"ALGO"  },
+    {name:"Avalanche" , img:"images2/avalanche-logo.png", description:"Avalanche describes itself as an open, programmable smart contracts platform for decentralized applications. AVAX is used to pay transaction fees and can be staked to secure the network. Avalanche is compatible with Solidity, Ethereum’s programming language, and can be used to deploy custom private or public blockchains as subnets.", founder:"Emin Gün Sirer, Kevin Sekniqi, Maofan “Ted” Yin", whitePaper:"https://www.avalabs.org/whitepapers", released:"09/2020", symbol:"AVAX"},
+    {name:"Axie Infinity" , img:"images2/axie-infinity-logo.png" , description:"Axie Infinity is a non-fungible token-based online video game developed by Vietnamese studio Sky Mavis, known for its in-game economy which uses Ethereum-based cryptocurrencies. Players of Axie Infinity collect and mint NFTs which represent axolotl-inspired digital pets known as Axies. These creatures can be bred and battled with each other within the game.", founder:"Sky Mavis", whitePaper:"https://whitepaper.axieinfinity.com/", released:"03/2018", symbol:"AXS"},
+    {name:"Binance Coin" , img:"images2/binance-logo.png" , description:"Binance Coin is the cryptocurrency issued by Binance exchange and trades with the BNB symbol. As of Q2 2022, Binance Exchange is the largest cryptocurrency exchange in the world, with a volume of $7.6 billion. Every quarter, Binance uses one-fifth of its profits to repurchase and permanently destroy, or burn, Binance coins held in its treasury. ", founder:"Changpeng Zhao", whitePaper:"https://whitepaper.io/coin/binance", released:"6/2017", symbol:"BNB"},
+    {name:"Bitcoin Cash" , img:"images2/bitcoin-cash-logo.png" , description:"Bitcoin cash is a cryptocurrency created in August 2017, from a fork of Bitcoin.1﻿ Bitcoin Cash increased the size of blocks, allowing more transactions to be processed and improving scalability.", founder:" Fork of Bitcoin", whitePaper:"", released:"8/2017", symbol:"BCH"},
+    {name:"bitcoin" , img:"images2/bitcoin-logo.png" , description:"Bitcoin is a virtual currency designed to act as money and a form of payment outside the control of any one person, group, or entity, and thus removing the need for third-party involvement in financial transactions. It is rewarded to blockchain miners for the work done to verify transactions and can be purchased on several exchanges. Bitcoin was introduced to the public in 2009 by an anonymous developer or group of developers using the name Satoshi Nakamoto.", founder:"Satoshi Nakamoto", whitePaper:"https://bitcoin.org/bitcoin.pdf", released:"January, 2019", symbol:"BTC"},
+    {name:"Cardano" , img:"images2/cardano-logo.png" , description:"Cardano is a public blockchain platform. It is open-source and decentralized, with consensus achieved using proof of stake. It can facilitate peer-to-peer transactions with its internal cryptocurrency, ADA. Cardano was founded in 2015 by Ethereum co-founder Charles Hoskinson. The development of the project is overseen and supervised by the Cardano Foundation based in Zug, Switzerland. It is the largest cryptocurrency to use a proof-of-stake blockchain, which is seen as a greener alternative to proof-of-work protocols.", founder:"Charles Hoskinson", whitePaper:"https://whitepaper.io/document/581/cardano-whitepaper", released:"September, 2017", symbol:"ADA"},
+    {name:"Chainlink" , img:"images2/chainlink-logo.png" , description:"Chainlink is a cryptocurrency and technology platform that enables non-blockchain enterprises to securely connect with blockchain platforms. Chainlink is middleware that connects blockchain-based smart contracts with external data, such as baseball scores or stock prices. Chainlink's LINK currency pays Chainlink network operators and collateralizes the network's smart contract agreements.", founder:"Sergey Nazarov, Steve Ellis, Dr. Ari Juels", whitePaper:"https://chain.link/whitepaper", released:"May, 2019", symbol:"LINK"},
+    {name:"Cosmos" , img:"images2/cosmos-logo.png" , description:"Cosmos (ATOM) is a cryptocurrency that powers an ecosystem of blockchains designed to scale and interoperate with each other. The team aims to create an Internet of Blockchains, a network of blockchains able to communicate with each other in a decentralized way. Cosmos is a proof-of-stake chain. ATOM holders can stake their tokens in order to maintain the network and receive more ATOM as a reward.", founder:" Ethan Buchman", whitePaper:"https://v1.cosmos.network/resources/whitepaper", released:"March, 2019", symbol:"ATOM"},
+    {name:"Crypto.com Coin" , img:"images2/crypto-com-coin-logo.png" , description:"Crypto.com Chain is an Ethereum token that powers Crypto.com Pay, a service that aims to allow users to pay for goods and services with cryptocurrency while receiving cashback rewards.", founder:"	Bobby Bao Gary Or Kris Marszalek Rafael Melo", whitePaper:"https://crypto.com/images/crypto_com_whitepaper.pdf", released:"June, 2016", symbol:"CRO"},
+    {name:"Dai" , img:"images2/dai-logo.png" , description:"Dai ( formerly Sai or SAI) is a stablecoin cryptocurrency on the Ethereum blockchain which aims to keep its value as close to one United States dollar (USD) as possible through a system of smart contracts and the decentralized participants which those contracts incentivize to perform maintenance and governance functions. Dai is maintained and regulated by MakerDAO, a decentralized autonomous organization (DAO) composed of the owners of its governance token, MKR, who may vote on changes to certain parameters in its smart contracts in order to ensure the stability of Dai.", founder:"https://makerdao.com/en/whitepaper/", whitePaper:"https://makerdao.com/en/whitepaper/", released:"December, 2017", symbol:"DAI"} ,
+    {name:"Decentraland" , img:"images2/decentraland-logo.png" , description:"Decentraland is a 3D virtual world browser-based platform. Users may buy virtual plots of land in the platform as NFTs via the MANA cryptocurrency, which uses the Ethereum blockchain. It was opened to the public in February 2020, and is overseen by the nonprofit Decentraland Foundation.", founder:"Ariel Meilich, Esteban Ordano[", whitePaper:"https://decentraland.org/whitepaper.pdf", released:"February, 2020", symbol:"MANA"},
+    {name:"DistrictOx" , img:"images2/district.png" , description:"District0x is an Ethereum token that powers a network of decentralized marketplaces and communities called districts. The token is required for application to the District Registry and is used to signal support or disapproval for proposals made by network participants.", founder:"Joe Urgo and Matus Lestan", whitePaper:"https://district0x.io/docs/district0x-whitepaper.pdf", released:"August, 2017", symbol:"DNT"},
+    {name:"Dogecoin" , img:"images2/dogecoin-logo.png" , description:"Dogecoin is a cryptocurrency created by software engineers Billy Markus and Jackson Palmer, who decided to create a payment system as a joke, making fun of the wild speculation in cryptocurrencies at the time. It is considered both the first meme coin, and, more specifically, the first dog coin. Despite its satirical nature, some consider it a legitimate investment prospect. Dogecoin features the face of the Shiba Inu dog from the doge meme as its logo and namesake. It was introduced on December 6, 2013, and quickly developed its own online community, reaching a market capitalization of over $85 billion on May 5, 2021. It is the current shirt sponsor (sleeve only) of Premier League club Watford. Dogecoin.com promotes the currency as the fun and friendly Internet currency, referencing its origins as a joke. Software engineers Billy Markus and Jackson Palmer launched the satirical cryptocurrency as a way to make fun of Bitcoin and the many other cryptocurrencies boasting grand plans to take over the world. With the help of Reddit, the site became an instant hit. Within two weeks, Dogecoin had established a dedicated blog and forum, and its market value has reached $8 million, once jumping to become the seventh largest electronic currency in the world.[10] Dogecoin is based on Scrypt algorithm, and the transaction process is more convenient than Bitcoin. Dogecoin takes only 1 minute to confirm, while BTC takes 10 minutes.", founder:"Billy Markus and Jackson Palmer", whitePaper:"https://coinnws.com/dogecoin-whitepaper/", released:"December, 2013", symbol:"DOGE"},
+    {name:"Elrond" , img:"images2/elrond-logo.png" , description:"Elrond is a blockchain protocol that seeks to offer extremely fast transaction speeds by using sharding. The project describes itself as a technology ecosystem for the new internet, which includes fintech, decentralized finance and the Internet of Things.", founder:"Beniamin Mincu", whitePaper:"https://elrond.com/assets/files/elrond-whitepaper.pdf", released:"July, 2020", symbol:"EGLD"},
+    {name:"Eos" , img:"images2/eos-logo.png" , description:"Based on a white paper published in 2017, the EOSIO platform was developed by the private company block.one and released as open-source software on June 1, 2018. In order to ensure widespread distribution of the native cryptocurrency at the launch of the blockchain, one billion tokens were distributed as ERC-20 tokens by block.one. This provided the distribution to allow anyone to launch the EOS blockchain once the software was released. The CEO of block.one, Brendan Blumer, announced that block.one would support the EOSIO blockchain with over one billion USD in funding from the token sale and ultimately block.one raised over four billion USD to support the blockchain during the Initial Coin Offering (ICO) period.", founder:"Daniel Larimer, Brendan Blumer", whitePaper:"https://github.com/EOSIO/Documentation/blob/master/TechnicalWhitePaper.md", released:"January, 2018", symbol:"EOS"},
+    {name:"Ethereum Classic" , img:"images2/ethereum-classic-logo.png" , description:"ETC is the native cryptocurrency of Ethereum Classic, a blockchain project that was created in 2016 when Ethereum’s blockchain split into two separate chains following a disagreement among members of its community. The old chain that remained after the split became known as Ethereum Classic, and has further separated itself from Ethereum over time by adopting a deflationary monetary policy with a hard cap on the total number of ETC that will be created.", founder:"	Vitalik Buterin, Gavin Wood", whitePaper:"https://www.allcryptowhitepapers.com/ethereumclassic-whitepaper/", released:"July, 2015", symbol:"ETC"},
+    {name:"Filecoin" , img:"images2/filecoin-logo.png" , description:"Filecoin is a cryptocurrency that powers the Filecoin network, a decentralized peer-to-peer file storage network that aims to let anyone store, retrieve, and host digital information. FIL tokens are used as payment for these services and as an economic incentive to ensure files are stored reliably over time.", founder:"Protocol Labs and Juan Benet", whitePaper:"", released:"August, 2017", symbol:"FIL"},
+    {name:"Flow" , img:"images2/flow-logo.png" , description:"Flow is a blockchain that has been developed by the team Dapper Labs that created CryptoKitties in 2017. Flow was created to provide solutions and applications for scalability for things like apps, games, and other digital assets. The goal of Flow is to provide, a blockchain that avoids sharding on the network and maintains reliable decentralization.", founder:"Mihaly Csikszentmihalyi", whitePaper:"https://www.onflow.org/technical-paper", released:"October, 2020", symbol:"Flow"},
+    {name:"Ftx" , img:"images2/ftx-logo.png" , description:"FTX is a cryptocurrency derivatives exchange backed by trading firm Alameda Research, both of which were founded by crypto billionaire Sam Bankman-Fried.", founder:"Samuel Bankman-Fried ", whitePaper:"https://whitepaper.io/coin/ftx-token", released:"May, 2019", symbol:"FTT"},
+    {name:"Hedera" , img:"images2/hedera-logo.png" , description:"Hashgraph is a distributed ledger technology that has been described as an alternative to blockchains. The hashgraph technology is currently patented, and the only authorized ledger is Hedera Hashgraph. Unlike blockchains, hashgraphs do not bundle data into blocks or use miners to validate transactions. Instead, hashgraphs use a gossip about gossip protocol where the individual nodes on the network gossip about transactions to create directed acyclic graphs that time-sequence transactions.[1] Each gossip message contains one or more transactions plus a timestamp, a digital signature, and cryptographic hashes of two earlier events.", founder:"Leemon Baird", whitePaper:"https://hedera.com/papers", released:"July,2017", symbol:"HBAR"},
+    {name:"Helium" , img:"images2/helium-logo.png" , description:"", founder:"", whitePaper:"", released:"", symbol:""},
+    {name:"Huobi" , img:"images2/huobi-logo.png" , description:"", founder:"", whitePaper:"", released:"", symbol:""},
+    {name:"Internet Computer" , img:"images2/internet-computer-logo.png" , description:"", founder:"", whitePaper:"", released:"", symbol:""},
+    {name:"Klaytn" , img:"images2/klaytn-logo.png" , description:"", founder:"", whitePaper:"", released:"", symbol:""},
+    {name:"Kucoin Token" , img:"images2/kucoin-logo.png" , description:"", founder:"", whitePaper:"", released:"", symbol:""},
+    {name:"Litecoin" , img:"images2/litecoin-logo.png" , description:"", founder:"", whitePaper:"", released:"", symbol:""},
+    {name:"Maker" , img:"images2/maker-logo.png" , description:"", founder:"", whitePaper:"", released:"", symbol:""},
+    {name:"Monero" , img:"images2/monero-logo.png" , description:"", founder:"", whitePaper:"", released:"", symbol:""},
+    {name:"Near" , img:"images2/near-logo.png" , description:"", founder:"", whitePaper:"", released:"", symbol:""},
+    {name:"Polkadot" , img:"images2/polkadot-logo.png" , description:"", founder:"", whitePaper:"", released:"", symbol:""},
+    {name:"Polygon" , img:"images2/polygon-logo.png" , description:"", founder:"", whitePaper:"", released:"", symbol:""},
+    {name:"Shiba inu" , img:"images2/shiba-inu-logo.png" , description:"", founder:"", whitePaper:"", released:"", symbol:""},
+    {name:"Solana" , img:"images2/solana-logo.png" , description:"", founder:"", whitePaper:"", released:"", symbol:""},
+    {name:"Stellar" , img:"images2/stellar-logo.png" , description:"", founder:"", whitePaper:"", released:"", symbol:""},
+    {name:"Tether" , img:"images2/tether-logo.png" , description:"", founder:"", whitePaper:"", released:"", symbol:""},
+    {name:"Tezos" , img:"images2/tezos-logo.png" , description:"", founder:"", whitePaper:"", released:"", symbol:""},
+    {name:"The Sandbox" , img:"images2/the-sandbox-logo.png" , description:"", founder:"", whitePaper:"", released:"", symbol:""},
+    {name:"Theta Network" , img:"images2/theta-network-logo.png" , description:"", founder:"", whitePaper:"", released:"", symbol:""},
+    {name:"Tron" , img:"images2/tron-logo.png" , description:"", founder:"", whitePaper:"", released:"", symbol:""},
+    {name:"TrueUSD" , img:"images2/trueusd-logo.png" , description:"", founder:"", whitePaper:"", released:"", symbol:""},
+    {name:"Uniswap" , img:"images2/uniswap-logo.png" , description:"", founder:"", whitePaper:"", released:"", symbol:""},
+    {name:"Unus Sed Leo" , img:"images2/unus-sed-leo-logo.png" , description:"", founder:"", whitePaper:"", released:"", symbol:""},
+    {name:"USD Coin" , img:"images2/usd-coin-logo.png" , description:"", founder:"", whitePaper:"", released:"", symbol:""},
+    {name:"Vechain" , img:"images2/vechain-logo.png", description:"", founder:"", whitePaper:"", released:"", symbol:""},
+    {name:"Wrapped Bitcoin" , img:"images2/wrapped-bitcoin-logo.png" , description:"", founder:"", whitePaper:"", released:"", symbol:""},
+    {name:"XRP" , img:"images2/xrp-logo.png" , description:"", founder:"", whitePaper:"", released:"", symbol:""},
+    {name:"Zcash" , img:"images2/zcash-logo.png" , description:"", founder:"", whitePaper:"", released:"", symbol:""} ]
 // builds content for index.html
-console.log("hello")
+
 function hello(){
+    console.log("hello")
+    
         let displayArray= []
         const newArray = oldArray.map((x) => {
             return (
                 displayArray.push(`<div id=${x.name} value=${x.name} class="col-4 col-sm-3 col-lg-2 mt-2"><a href="cryptobreakout.html?name=${x.name}">
                 <img class="crypto-img"  src=${x.img} />
                 <h4 class="text-info text-center" >${x.name}</h4></a>
+              
             </div>`)
             )
         })
@@ -293,6 +294,12 @@ function hello(){
 function loadCard() {
     const params = new URLSearchParams(window.location.search)
     let y = params.get("name")
+    console.log(y)
+    fetch(`https://api.coingecko.com/api/v3/simple/price?ids=${y}&vs_currencies=usd`)
+    
+    .then(res => res.json())
+    .then(data => console.log(`${data}.${y}`))
+
     let x = oldArray.find(e => e.name === y)
     document.getElementById("individual-crypto").innerHTML = `
     <div class="card mx-auto" >
@@ -300,27 +307,32 @@ function loadCard() {
     <div class="card-body">
     <h4 class="card-title text-center">${x.name}</h4>
     <h4 class="card-title text-center">current price: $44.54</h4>
-    <p class="text-center card-text">Litecoin is a peer-to-peer (P2P) virtual currency, which means it is not governed by a central authority. Litecoin's network offers instant, near-zero cost payments that can be conducted by individuals or institutions across the globe. Bitcoin, Litecoin, and many other cryptocurrencies use the proof-of-work (PoW) algorithm in order to secure their networks. Basically, PoW requires that one party proves to all the other participating parties in the network that a required amount of computational effort has been expended. Unlike Bitcoin, which uses the SHA-256 PoW hashing algorithm, Litecoin uses the less resource-intensive Scrypt PoW algorithm. </p>
-    <ul class="card-text">
-        <li>Creator: john doe </li>
-        <li>Created: 1/23/2022</li
+    <p class="text-center card-text">${x.description} </p>
+    <hr/>
+    <ul class="card-text text-center mx-auto">
+        <li class="mx-auto">Creator: ${x.founder} </li>
+        <li>Released: ${x.released}</li>
         <li>Cap: 2,345,678</li>
-        <li>Circulation: 21,234</li>
+        <a href="${x.whitePaper}"><li class="text-info">White Paper</li></a>
+        <li> Symbol: ${x.symbol}</li>
         </ul>
     <div class="card-footer">
         <button class="btn-block">new</button>
         </div>
     </div> ` 
 }
+
+
+// coin market cap api key : ce02a426-e1fb-4be0-83e1-6423b64b7e1f
+//builds Glossary page 
 function f(){
-    console.log("hello")
     let newArray = []
     const y = glossaryArray.map((x, index) =>{
        return(
         newArray.push( 
-        `<div class="card  ${index % 2 != 0? "bg-info": "bg-secondary" }">
-            <div class="card-header" id="crypto">
-                <h3><button class="btn btn-link collapsed text-white" type="button" data-toggle="collapse" data-target="#a${index}">${x.term}</button> </h3>
+        `<div class="card  ${index % 2 != 0? "bg-info": "bg-secondary" }" id="${index}">
+            <div class="card-header" id="crypto" >
+                <h3><button class="btn btn-link collapsed text-white" type="button" data-toggle="collapse" data-target="#a${index}">${x.term} ${index}</button> </h3>
             </div>
             <div class="collapse" id="a${index}" data-parent="#collapseSection">
                 <div class="card-body">

@@ -42,3 +42,10 @@ p{
     line-height: 2ems;
     font-size: medium;
 }
+ul{
+    list-style: none;
+    padding-inline-start: 0;
+}
+#alphabet > a{
+    color:cadetblue;
+}
