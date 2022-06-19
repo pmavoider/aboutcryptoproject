@@ -1,0 +1,44 @@
+.crypto-img{
+    margin:auto;
+    display:block;
+    max-width: 80px;
+    max-height:80x;
+}
+.crypto-card{
+    border-radius:12px;
+    padding:3px 1px 3px 1px;
+    
+}
+H1{
+    font-family: 'Rufina', serif;
+}
+.jumbotron-fluid , footer {
+    background-color:cadetblue;}
+
+body{
+    background-color:azure;
+    margin:0;
+    padding:0;
+}
+.navbar{
+    background-color:cadetblue;
+}
+a{color:white;}
+
+video{
+    height:80vh;
+    width:70vw;
+   
+}
+.about-crypto-image{
+    width:80vw;
+    height:50vh;
+    margin:auto;
+    max-width:600px;
+    border-radius: 15px;
+    box-shadow: 3px 3px 3px grey;
+}
+p{
+    line-height: 2ems;
+    font-size: medium;
+}
