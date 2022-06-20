@@ -303,8 +303,9 @@ function loadCard() {
     let x = oldArray.find(e => e.name === y)
     document.getElementById("individual-crypto").innerHTML = `
     <div class="card mx-auto" >
-    <div class="card-header"><button class="btn-block btn-dark " >random</button></div><img class="card-img-top col-6 col-sm-8 mx-auto mt-3"  src=${x.img}>
-    <div class="card-body">
+    <div class="card-header"><button class="btn-block btn-dark " onclick="randomCard()" >random</button></div>
+    <img class="card-img-top col-4 col-sm-6 mx-auto mt-3"  src=${x.img}>
+    <div class="card-body col-10 mx-auto">
     <h4 class="card-title text-center">${x.name}</h4>
     <h4 class="card-title text-center">current price: $44.54</h4>
     <p class="text-center card-text">${x.description} </p>
@@ -320,6 +321,12 @@ function loadCard() {
         <button class="btn-block">new</button>
         </div>
     </div> ` 
+}
+
+function randomCard (){
+    let random = Math.floor(Math.random() * oldArray.length)
+    location.href = " cryptobreakout.html"+"?name=" + oldArray[random].name
+
 }
 
 

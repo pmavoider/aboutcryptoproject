@@ -48,4 +48,5 @@ ul{
 }
 #alphabet > a{
     color:cadetblue;
+    font-weight:bold;
 }
