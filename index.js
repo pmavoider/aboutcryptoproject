@@ -298,7 +298,7 @@ function loadCard() {
     fetch(`https://api.coingecko.com/api/v3/simple/price?ids=${y}&vs_currencies=usd`)
     
     .then(res => res.json())
-    .then(data => console.log(`${data}.${y}`))
+    .then(data => console.log(data + "." + bitcoin))
 
     let x = oldArray.find(e => e.name === y)
     document.getElementById("individual-crypto").innerHTML = `
@@ -332,7 +332,7 @@ function f(){
         newArray.push( 
         `<div class="card  ${index % 2 != 0? "bg-info": "bg-secondary" }" id="${index}">
             <div class="card-header" id="crypto" >
-                <h3><button class="btn btn-link collapsed text-white" type="button" data-toggle="collapse" data-target="#a${index}">${x.term} ${index}</button> </h3>
+                <h3><button class="btn btn-link collapsed text-white" type="button" data-toggle="collapse" data-target="#a${index}">${x.term}</button> </h3>
             </div>
             <div class="collapse" id="a${index}" data-parent="#collapseSection">
                 <div class="card-body">
