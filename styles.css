@@ -12,7 +12,7 @@
 H1{
     font-family: 'Rufina', serif;
 }
-.jumbotron-fluid , footer {
+.jumbotron-fluid , footer , .nav-crumbs {
     background-color:cadetblue;}
 
 body{
