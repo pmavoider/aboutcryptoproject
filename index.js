@@ -295,19 +295,22 @@ function loadCard() {
     const params = new URLSearchParams(window.location.search)
     let y = params.get("name")
     y = y.toLowerCase()
-    fetch(`https://api.coingecko.com/api/v3/simple/price?ids=${y}&vs_currencies=usd`)
+    loadPage(y)
+}
+    function loadPage(name){
+    fetch(`https://api.coingecko.com/api/v3/simple/price?ids=${name}&vs_currencies=usd`)
     
     .then(res => res.json())
     .then(data => {
         
-    let x = oldArray.find(e => e.id === y)
+    let x = oldArray.find((e, index) => e.id === name)
     document.getElementById("individual-crypto").innerHTML = `
     <div class="card mx-auto" >
-    <div class="card-header"><button class="btn-block btn-dark " onclick="randomCard()" >random</button></div>
-    <img class="card-img-top col-4 col-sm-6 mx-auto mt-3"  src=${x.img}>
+    <div class="card-header"><button class="col-6 mx-auto  btn-block btn-info btn-lg " onclick="randomCard()" >random</button></div>
+    <img class="card-img-top mt-5 col-4 col-sm-6 mx-auto mt-3" id="img" name="${x.name}"  src=${x.img}>
     <div class="card-body col-10 mx-auto">
     <h2 class="card-title text-center mb-3">${x.name}</h2>
-    <h4 class="card-title text-center mt-5">current price: $ ${(Math.round(data[y].usd * 1000) /1000)} </h4>
+    <h4 class="card-title text-center mt-5">current price: $ ${(Math.round(data[name].usd * 1000) /1000)} </h4>
     <p class="text-center card-text">${x.description} </p>
     <hr/>
     <ul class="card-text text-center mx-auto">
@@ -315,10 +318,18 @@ function loadCard() {
         <li>Released: ${x.released}</li>
         <li>Cap: 2,345,678</li>
         <a href="${x.whitePaper}"><li class="text-info">White Paper</li></a>
-        <li> Symbol: ${x.symbol}</li>
+        <li > Symbol:<span id="symb" name=${x.symbol}>${x.symbol}</span></li>
         </ul>
-    <div class="card-footer">
-        <button class="btn-block">new</button>
+    <div class="card-footer bg-white">
+    <div class="row row-content">
+                <div class="col-6">
+                <button class="btn-block col-5 mr-auto" onclick="left()" name="descending"><i class="fa fa-arrow-left fa-lg text-primary"></i></button>
+                </div>
+                <div class="col-6">
+                <button class="btn-block col-5 ml-auto" onclick="right()"> <i class="fa fa-arrow-right fa-lg text-primary"></i>
+            </button>
+            </div>
+       </div>
         </div>
     </div> ` })
 }
@@ -332,7 +343,7 @@ function randomCard (){
 
 // coin market cap api key : ce02a426-e1fb-4be0-83e1-6423b64b7e1f
 //builds Glossary page 
-function f(){
+function glossaryBuilder(){
     let newArray = []
     const y = glossaryArray.map((x, index) =>{
        return(
@@ -363,3 +374,25 @@ function f(){
                     </div>
                 </div>*/
 
+
+
+function left(e){
+    let i = document.getElementById("symb").innerText
+    let x = oldArray.find(e => e.symbol == i)
+    let index = oldArray.indexOf(x)
+    if (index != 0){
+        loadPage(oldArray[index - 1].id)
+    }else{
+        loadPage(oldArray[oldArray.length - 1].id)
+    }
+}
+function right(e){
+    let i = document.getElementById("symb").innerText
+    let x = oldArray.find(e => e.symbol == i)
+    let index = oldArray.indexOf(x)
+    if (index != (oldArray.length)){
+        loadPage(oldArray[index + 1].id)
+    }else{
+        loadPage(oldArray[0].id)
+    }
+}
