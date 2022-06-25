@@ -11,11 +11,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Rufina&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
     </head>
-    <body onload="hello()" >
+    <body onload="hello(oldArray)" >
         <div class="jumbotron-fluid">
             <div class="row row-content">
                 <div class=" col col-sm-6">
-                    <h1 class="text-white pt-2 pb-2 text-center">The Crypto Primer</h1>
+                    <h1 class="text-white py-3 text-center">The Crypto Primer</h1>
                 </div>
                 <div class="col col-sm-6 ">
                     <nav class="navbar  mt-3 navbar-expand-sm">
@@ -25,7 +25,7 @@
                         
                         <div class="collapse navbar-collapse" id="drop">
                             <ul class="navbar-nav ml-auto mx-md-auto ">
-                                <li class="nav-item ml-auto">
+                                <li class="nav-item ml-auto pl-3">
                                     <a href="whatsacrypto.html" class="nav-item">
                                          Whats a Crypto
                                     </a>
@@ -41,7 +41,8 @@
                                         Contact Us
                                     </a>
                                 </li>
-                                <input class=" d-sm-none ml-auto mt-3" placeholder="Search" type="text"></input>
+                                <input class=" d-sm-none ml-auto mt-3"  id="Bar" 
+                                 placeholder="Search" type="text" />
                                   
                                
                             </ul>
@@ -56,9 +57,9 @@
         
         </div>
 
-        <div class="container-fluid">
+        <div class="container">
                 <input class="d-none d-sm-block ml-auto mt-3" placeholder="Search" type="text"></input>
-            <h2 class="text-center text-info mt-3">Click on a Token to learn more.</h2>
+            <h2 class="text-center text-info mt-3">Click on a Token to learn more</h2>
             <div class="row mt-4" id="newOnes">
                
             </div>

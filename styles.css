@@ -1,15 +1,15 @@
 .crypto-img{
     margin:auto;
     display:block;
-    max-width: 80px;
-    max-height:80x;
+    max-width: 90px;
+    max-height:90px;
 }
 .crypto-card{
     border-radius:12px;
     padding:3px 1px 3px 1px;
     
 }
-H1{
+H1, h2{
     font-family: 'Rufina', serif;
 }
 .jumbotron-fluid , footer , .nav-crumbs {
@@ -63,3 +63,10 @@ ul{
 .circle{
     border:3px solid cadetblue;
 }
+
+@media only screen and (min-width: 992px){
+    .crypto-img{
+        max-width: 120px;
+        max-height:120px;
+    }
+    }

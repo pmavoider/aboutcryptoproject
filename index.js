@@ -272,23 +272,28 @@ let oldArray = [
     {name:"Wrapped Bitcoin" , id:"wrapped-bitcoin",  img:"images2/wrapped-bitcoin-logo.png" , description:"Wrapped Bitcoin (WBTC) is an ERC-20 token that represents Bitcoin (BTC) on the Ethereum blockchain. A key advantage of WBTC is its integration into the world of Ethereum wallets, dapps, and smart contracts. Through a WBTC partner, 1 Bitcoin can be converted to 1 Wrapped Bitcoin, and vice-versa.", founder:"Republic Protocol", whitePaper:"https://wbtc.network/assets/wrapped-tokens-whitepaper.pdf", released:"January 2019", symbol:"WBTC"},
    // {name:"XRP" , id:"xrp",  img:"images2/xrp-logo.png" , description:"", founder:"", whitePaper:"", released:"", symbol:""},
     {name:"Zcash" , id:"zcash",  img:"images2/zcash-logo.png" , description:"Zcash is a cryptocurrency aimed at using cryptography to provide enhanced privacy for its users compared to other cryptocurrencies such as Bitcoin. Zcash is based on Bitcoin's codebase. It shares many similarities, such as a fixed total supply of 21 million units", founder:"Zooko Wilcox", whitePaper:"http://zerocash-project.org/media/pdf/zerocash-extended-20140518.pdf", released:"October 2016", symbol:"ZEC"} ]
-// builds content for index.html
+//Search bar 
+let userInput = document.getElementById("Bar")
 
-function hello(){
+userInput.addEventListener('keyup' ,()=> { alert("f")})
+    
+    // builds content for index.html
+
+function hello(arr){
     console.log("hello")
     
         let displayArray= []
-        const newArray = oldArray.map((x) => {
+        const newArray = arr.map((x) => {
             return (
-                displayArray.push(`<div id=${x.name} value=${x.name} class="col-4 col-sm-3 col-lg-2 mt-2"><a href="cryptobreakout.html?name=${x.id}">
+                displayArray.push(`<div id=${x.name} value=${x.name} class="col-4 col-sm-4 col-md-3 mt-4"><a href="cryptobreakout.html?name=${x.id}">
                 <img class="crypto-img"  src=${x.img} />
-                <h4 class="text-info text-center" >${x.name}</h4></a>
+                <h4 class="text-info text-center mt-3" >${x.name}</h4></a>
               
             </div>`)
             )
         })
        document.getElementById("newOnes").innerHTML = displayArray.join("")
-        
+      
 }
 //builds content on crypto breakout need to add api call to get current price
 function loadCard() {
