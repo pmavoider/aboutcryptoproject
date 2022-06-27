@@ -275,9 +275,22 @@ let oldArray = [
 //Search bar 
 let userInput = document.getElementById("Bar")
 
-userInput.addEventListener('keyup' ,()=> { alert("f")})
+userInput.addEventListener('keyup' ,search)
     
-    // builds content for index.html
+function search(e){
+    const searchString = e.target.value.toLowerCase();
+
+    const filteredCharacters = oldArray.filter((search) => {
+        return (
+            search.name.toLowerCase().includes(searchString)
+        );
+    });
+    hello(filteredCharacters);
+}
+
+
+
+// builds content for index.html
 
 function hello(arr){
     console.log("hello")
