@@ -313,36 +313,29 @@ function loadCard() {
     function loadPage(name){
     fetch(`https://api.coingecko.com/api/v3/simple/price?ids=${name}&vs_currencies=usd`)
     
-    .then(handleError)
+    .then(res => res.json())
     .then(data => {
         
     let x = oldArray.find((e, index) => e.id === name)
     document.getElementById("individual-crypto").innerHTML = `
     <div class="card mx-auto" >
-    <div class="card-header"><button class="col-6 mx-auto  btn-block btn-info btn-lg " onclick="randomCard()" >random</button></div>
+    <div class="card-header mt-3"> <button class="btn-inline-block bg-info btn-lg col-4 mr-auto" onclick="left()" name="descending"><i class="fa fa-arrow-left fa-lg text-white"></i></button><button class="col-4 px-4  btn-inline-block btn-info btn-lg " onclick="randomCard()" >random</button><button class=" bg-info btn-inline-block btn-lg col-4 ml-auto" onclick="right()"> <i class="fa fa-arrow-right fa-lg text-white"></i>
+    </button></div>
     <img class="card-img-top mt-5 col-4 col-sm-6 mx-auto mt-3" id="img" name="${x.name}"  src=${x.img}>
     <div class="card-body col-10 mx-auto">
     <h2 class="card-title text-center mb-3">${x.name}</h2>
-    <h4 class="card-title text-center mt-5">current price: $  ${(Math.round(data[name].usd * 1000) /1000)} </h4>
-    <p class="text-center card-text">${x.description} </p>
-    <hr/>
-    <ul class="card-text text-center mx-auto">
-        <li class="mx-auto">Creator: ${x.founder} </li>
-        <li>Released: ${x.released}</li>
-        <li>Cap: 2,345,678</li>
-        <a href="${x.whitePaper}"><li class="text-info">White Paper</li></a>
-        <li > Symbol:<span id="symb" name=${x.symbol}>${x.symbol}</span></li>
+    <h4 class="card-title text-center mt-4">Current Price: $ ${(Math.round(data[name].usd * 1000) /1000)}  </h4>
+    <p class="text-center card-text mt-4">${x.description} </p>
+    <hr class="my-5"/>
+    <ul class="card-text text-center mt-4 mx-auto">
+        <li class="mx-auto"><h5>Creator(s): ${x.founder} </h5></li>
+        <li><h5>Released: ${x.released}</h5></li>
+        <li><h5>Cap: 2,345,678</h5></li>
+        <a href="${x.whitePaper}"><li class="text-info"><h5>White Paper</h5></li></a>
+        <li > <h5>Symbol:</h5><span id="symb" name=${x.symbol}><h5>${x.symbol}</h5></span></li>
         </ul>
     <div class="card-footer bg-white">
-    <div class="row row-content">
-                <div class="col-6">
-                <button class="btn-block col-5 mr-auto" onclick="left()" name="descending"><i class="fa fa-arrow-left fa-lg text-primary"></i></button>
-                </div>
-                <div class="col-6">
-                <button class="btn-block col-5 ml-auto" onclick="right()"> <i class="fa fa-arrow-right fa-lg text-primary"></i>
-            </button>
-            </div>
-       </div>
+   
         </div>
     </div> ` 
 })
