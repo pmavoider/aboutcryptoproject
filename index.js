@@ -295,6 +295,14 @@ function hello(arr){
        document.getElementById("newOnes").innerHTML = displayArray.join("")
       
 }
+
+const handleError = res => {
+    if(!res.ok){
+        throw Error (res.statusText);
+    }else{
+        return res.json()
+    }
+}
 //builds content on crypto breakout need to add api call to get current price
 function loadCard() {
     const params = new URLSearchParams(window.location.search)
@@ -305,7 +313,7 @@ function loadCard() {
     function loadPage(name){
     fetch(`https://api.coingecko.com/api/v3/simple/price?ids=${name}&vs_currencies=usd`)
     
-    .then(res => res.json())
+    .then(handleError)
     .then(data => {
         
     let x = oldArray.find((e, index) => e.id === name)
@@ -315,7 +323,7 @@ function loadCard() {
     <img class="card-img-top mt-5 col-4 col-sm-6 mx-auto mt-3" id="img" name="${x.name}"  src=${x.img}>
     <div class="card-body col-10 mx-auto">
     <h2 class="card-title text-center mb-3">${x.name}</h2>
-    <h4 class="card-title text-center mt-5">current price: $ ${(Math.round(data[name].usd * 1000) /1000)} </h4>
+    <h4 class="card-title text-center mt-5">current price: $  ${(Math.round(data[name].usd * 1000) /1000)} </h4>
     <p class="text-center card-text">${x.description} </p>
     <hr/>
     <ul class="card-text text-center mx-auto">
@@ -336,7 +344,9 @@ function loadCard() {
             </div>
        </div>
         </div>
-    </div> ` })
+    </div> ` 
+})
+ .catch(console.log)
 }
 
 function randomCard (){
