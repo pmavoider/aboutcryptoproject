@@ -288,8 +288,23 @@ function search(e){
     hello(filteredCharacters);
 }
 
+let options = {
+    root: null ,
+    rootMargin: '0px',
+    threshold: 0
+  }
+  let target = document.getElementById("j");
+  target.addEventListener("click", ()=>{console.log("f")})
+  let observer = new IntersectionObserver(callback, options);
+  
 
-
+let callback = (entries , observer) => {
+        entries.forEach(entry => {
+                alert("h")
+            })
+         
+    }
+    observer.observe(target);
 // builds content for index.html
 
 function hello(arr){
