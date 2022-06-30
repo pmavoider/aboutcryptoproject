@@ -288,11 +288,6 @@ function search(e){
     hello(filteredCharacters);
 }
 
-let options = {
-    root: document.getElementById("jack") ,
-    rootMargin: '0px',
-    threshold: 0
-  }
 
 function hello(arr){
         let displayArray= []
@@ -332,7 +327,7 @@ function loadCard() {
     let x = oldArray.find((e, index) => e.id === name)
     document.getElementById("individual-crypto").innerHTML = `
     <div class="card mx-auto" >
-    <div class="card-header mt-3"> <button class="btn-inline-block bg-info btn-lg col-4 mr-auto" onclick="left()" name="descending"><i class="fa fa-arrow-left fa-lg text-white"></i></button><button class="col-4 px-4  btn-inline-block btn-info btn-lg " onclick="randomCard()" >random</button><button class=" bg-info btn-inline-block btn-lg col-4 ml-auto" onclick="right()"> <i class="fa fa-arrow-right fa-lg text-white"></i>
+    <div class="card-header mt-3"> <button class="btn-inline-block bg-info btn-lg col-2 mr-auto" onclick="left()" name="descending"><i class="fa fa-arrow-left fa-lg text-white"></i></button><button class="col-8 btn-lg   btn-inline-block btn-info  " onclick="randomCard()" >random</button><button class=" bg-info btn-inline-block btn-lg col-2 ml-auto" onclick="right()"> <i class="fa fa-arrow-right fa-lg text-white"></i>
     </button></div>
     <img class="card-img-top mt-5 col-4 col-sm-6 mx-auto mt-3" id="img" name="${x.name}"  src=${x.img}>
     <div class="card-body col-10 mx-auto">
