@@ -289,27 +289,12 @@ function search(e){
 }
 
 let options = {
-    root: null ,
+    root: document.getElementById("jack") ,
     rootMargin: '0px',
     threshold: 0
   }
-  let target = document.getElementById("j");
-  target.addEventListener("click", ()=>{console.log("f")})
-  let observer = new IntersectionObserver(callback, options);
-  
-
-let callback = (entries , observer) => {
-        entries.forEach(entry => {
-                alert("h")
-            })
-         
-    }
-    observer.observe(target);
-// builds content for index.html
 
 function hello(arr){
-    console.log("hello")
-    
         let displayArray= []
         const newArray = arr.map((x) => {
             return (
