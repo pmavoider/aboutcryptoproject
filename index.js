@@ -1,5 +1,5 @@
 
-const glossaryArray =[
+var glossaryArray =[
     {term: "51% attack" , definition:"A majority attack that occurs when more than half of the computer power on a network is run by a single person or a single group of people. The entity has full control of the network and can negatively affect a cryptocurrency by halting mining, stopping or changing transactions and reusing coins."
      }, {
      term: "Addresses", definition:`A unique address that identifies where a cryptocurrency sits on the blockchain. It"\’"s this location at which the coin\’s ownership data is stored and where any changes are registered when it is traded. Addresses look different among cryptocurrencies but are usually a string of more than 30 characters.`
@@ -222,7 +222,7 @@ const glossaryArray =[
      }, {
         term:"White Paper" , definition:"A detailed explanation of a cryptocurrency, designed to offer satisfactory technical information, explain the purpose of the coin and set out a roadmap for how it plans to succeed. It\’s designed to convince investors that it\’s a good choice ahead of an ICO." 
      }]
-let oldArray = [
+var oldArray = [
     {name:"Aave" , id: "aave", img:"images2/aave-logo.png", description: "AAVE is a decentralized finance platform where users can borrow a range of crypto currencies , as well as lend assets in exchange for interest payments. All without needing a middleman. ", founder: "Stani Kulechov" , whitePaper:"https://github.com/aave/aave-protocol/blob/master/docs/Aave_Protocol_Whitepaper_v1_0.pdf", released: "11/2017" , symbol:"AAVE"  },
     {name:"Algorand" , id:"algorand", img:"images2/algorand.png", description:"Algorand is an open-source, payments-focused blockchain network that aims to solve one of the most persistent problems facing cryptocurrency: scalability. To do that, Algorand employs a novel, more scalable form of “proof-of-stake,” a consensus mechanism that’s critical for securing blockchains and making sure no one can create new tokens out of thin air that they didn’t earn. " , founder:"Silvio Micali", whitePaper:"https://arxiv.org/abs/1607.01341", released:"06/2019", symbol:"ALGO"  },
    // {name:"Avalanche" , img:"images2/avalanche-logo.png", description:"Avalanche describes itself as an open, programmable smart contracts platform for decentralized applications. AVAX is used to pay transaction fees and can be staked to secure the network. Avalanche is compatible with Solidity, Ethereum’s programming language, and can be used to deploy custom private or public blockchains as subnets.", founder:"Emin Gün Sirer, Kevin Sekniqi, Maofan “Ted” Yin", whitePaper:"https://www.avalabs.org/whitepapers", released:"09/2020", symbol:"AVAX"},
@@ -273,10 +273,12 @@ let oldArray = [
    // {name:"XRP" , id:"xrp",  img:"images2/xrp-logo.png" , description:"", founder:"", whitePaper:"", released:"", symbol:""},
     {name:"Zcash" , id:"zcash",  img:"images2/zcash-logo.png" , description:"Zcash is a cryptocurrency aimed at using cryptography to provide enhanced privacy for its users compared to other cryptocurrencies such as Bitcoin. Zcash is based on Bitcoin's codebase. It shares many similarities, such as a fixed total supply of 21 million units", founder:"Zooko Wilcox", whitePaper:"http://zerocash-project.org/media/pdf/zerocash-extended-20140518.pdf", released:"October 2016", symbol:"ZEC"} ]
 //Search bar 
-let userInput = document.getElementById("Bar")
 
+var userInput = document.getElementById("Bar")
+if(userInput){
 userInput.addEventListener('keyup' ,search)
-    
+}
+
 function search(e){
     const searchString = e.target.value.toLowerCase();
 
@@ -304,13 +306,7 @@ function hello(arr){
       
 }
 
-const handleError = res => {
-    if(!res.ok){
-        throw Error (res.statusText);
-    }else{
-        return res.json()
-    }
-}
+
 //builds content on crypto breakout need to add api call to get current price
 function loadCard() {
     const params = new URLSearchParams(window.location.search)
@@ -327,7 +323,7 @@ function loadCard() {
     let x = oldArray.find((e, index) => e.id === name)
     document.getElementById("individual-crypto").innerHTML = `
     <div class="card mx-auto" >
-    <div class="card-header mt-3"> <button class="btn-inline-block bg-info btn-lg col-2 mr-auto" onclick="left()" name="descending"><i class="fa fa-arrow-left fa-lg text-white"></i></button><button class="col-8 btn-lg   btn-inline-block btn-info  " onclick="randomCard()" >random</button><button class=" bg-info btn-inline-block btn-lg col-2 ml-auto" onclick="right()"> <i class="fa fa-arrow-right fa-lg text-white"></i>
+    <div class="card-header mt-3"> <button class="btn-inline-block bg-info btn-lg col-2 mr-auto" onclick="left()" name="descending"><i class="fa-solid fa-left fa-lg text-white"></i></button><button class="col-8 btn-lg   btn-inline-block btn-info  " onclick="randomCard()" >random</button><button class=" bg-info btn-inline-block btn-lg col-2 ml-auto" onclick="right()"> <i class="fa fa-arrow-right fa-lg text-white"></i>
     </button></div>
     <img class="card-img-top mt-5 col-4 col-sm-6 mx-auto mt-3" id="img" name="${x.name}"  src=${x.img}>
     <div class="card-body col-10 mx-auto">
@@ -392,17 +388,17 @@ function glossaryBuilder(){
 
 
 
-function left(e){
-    let i = document.getElementById("symb").innerText
-    let x = oldArray.find(e => e.symbol == i)
-    let index = oldArray.indexOf(x)
+function left(event){
+    let i = document.getElementById("symb").innerText;
+    let x = oldArray.find(e => e.symbol == i);
+    let index = oldArray.indexOf(x);
     if (index != 0){
         loadPage(oldArray[index - 1].id)
     }else{
         loadPage(oldArray[oldArray.length - 1].id)
     }
 }
-function right(e){
+function right(event){
     let i = document.getElementById("symb").innerText
     let x = oldArray.find(e => e.symbol == i)
     let index = oldArray.indexOf(x)
