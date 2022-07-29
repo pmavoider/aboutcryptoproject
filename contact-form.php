@@ -1,7 +1,7 @@
 <?php
     $name= $_Post['name'];
     $visitor_email= $_Post['email'];
-    $message= $Post_['message'];
+    $message= $_Post['message'];
 
     $email_from = 'pmavoider@yahoo.com';
 
