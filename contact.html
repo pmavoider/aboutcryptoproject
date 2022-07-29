@@ -41,7 +41,7 @@
                                         Contact Us
                                     </a>
                                 </li>
-                                <input class=" d-sm-none ml-auto mt-3" placeholder="Search" type="text"></input>
+                               
                                   
                                
                             </ul>
@@ -66,29 +66,29 @@
         <div class="container">
             <div class=" row row-content mt-5">
                 <div class="col col-lg-6 mx-auto mt-5">
-                    <h2 class="text-center px-5 text-info " >We wouold love to hear from you!</h2>
+                    <h2 class="text-center px-5 text-info " >We would love to hear from you!</h2>
                     <img class="col-12" src="images2/telephone.jpg" />
                    
                 </div>
            
                 <div class="col-12 col-lg-6 mx-auto  mt-5 px-4 py-4">
                 
-                    <form>
+                    <form method="post" id="contact-form" action="contact-form.php">
                         <div class="form-group">
-                        <label for="exampleInputEmail1">Email address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <label for="email1">Email Address</label>
+                        <input type="email" class="form-control" name="email" id="email1" aria-describedby="emailHelp" required>
                         <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                         </div>
-                        <div class="form-group">
-                        <label for="exampleInputPassword1">Name</label>
-                        <input type="text" class="form-control" id="exampleInputPassword1">
+                        <div class="form-group" >
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" name="name" id="name" required>
                         </div>
                         <div class="form-group">
-                            <label for="textarea1" > enter message below:</label>
-                            <textarea class="form-control" id="textarea1" rows="6"></textarea>
+                            <label for="textarea1" > Enter Message Below:</label>
+                            <textarea name="message" class="form-control" id="textarea1" rows="6" required></textarea>
                             </div>
                        
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <input type="submit" class=" form-control submit btn btn-primary">Submit</button>
                     </form>
                 
                 </div>
@@ -102,27 +102,26 @@
 </body>
 <footer div class="jumbotron-fluid mt-3" >
     <div class="row row-content">
-        <div class="col col-sm-6">
-            <p class="align-middle text-center text-white mt-5"> Designed By: TSA Designs</p>
+        <div class="col col-sm-8 d-flex pb-5 flex-column align-items-center">
+            <h6 class="align-middle text-center text-white mt-4"> Designed By: Tommy Stephen Ayres</h6>
+
+            
+            <ul class="d-flex justify-content-center mt-0 ">
+            <li  class="m-3"><a href="https://github.com/pmavoider" class=" text-white"><i class="fa fa-github"></i></a></li>
+            <li class="m-3"><a href="https://www.linkedin.com/in/tommy-ayres-4860a6233/" class="  text-white"><i class="fa fa-linkedin fa-2xl"></i></a></li>
+            <li class="m-3"><a href="https://www.facebook.com/stephen.ayres.10" class="   text-white"><i class="fa fa-facebook fa-xl"></i></a></li>
+        </ul>
         </div>
-        <div class="col col-sm-3">
-            <ul class="py-4">
-                <li><a href="#">home</a></li>
+        <div class="col d-none d-sm-flex  col-sm-4">
+            <ul class="py-4 link">
+                <li><a href="#">Home</a></li>
                 <li><a href="whatsacrypto.html">About Crypto</a></li>
                 <li><a href="glossary.html">Glossary</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
 
             </ul>
         </div>
-        <div class="col col-sm-3">
-            <ul class="py-4">
-                <li><a class="text-white"><i class="fa fa-facebook-square"></i></a></li>
-                <li><a class="text-white"><i class="fa fa-twitter-square"></i></a></li>
-                <li><a class="text-white"><i class="fa fa-instagram"></i></a></li>
-                <li><a class="text-white"><i class="fa fa-github-square"></i></a></li>
-            </ul>
-
-        </div>
+   
 
 
     </div>

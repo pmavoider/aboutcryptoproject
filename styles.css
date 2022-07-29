@@ -19,6 +19,7 @@ body{
     background-color:azure;
     margin:0;
     padding:0;
+    height:100%;
 }
 .navbar{
     background-color:cadetblue;
@@ -62,6 +63,9 @@ ul{
 }
 .circle{
     border:3px solid cadetblue;
+}
+.link {
+    min-height:80px;
 }
 
 @media only screen and (min-width: 992px){
