@@ -329,7 +329,7 @@ function loadPage(name) {
         <div class="card-header mt-3">
         <div class="row mx-auto"> 
         <button class="btn-inline-block bg-info btn-lg col-2" onclick="left()" name="descending"><i class="fa fa-arrow-left fa-lg text-white"></i></button>
-        <button class="col-7 btn-lg   btn-inline-block  btn-info  " onclick="randomCard()" >random</button>
+        <button class="col-8 btn-lg   btn-inline-block  btn-info  " onclick="randomCard()" >random</button>
         <button class=" bg-info btn-inline-block btn-lg  col-2" onclick="right()"> <i class="fa fa-arrow-right fa-lg text-white"></i>
          </button> </div> </div>
     <img class="card-img-top mt-5 col-4 col-sm-6 mx-auto mt-3" id="img" name="${x.name}"  src=${x.img}>
