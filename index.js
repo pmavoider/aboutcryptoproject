@@ -274,19 +274,7 @@ var oldArray = [
     // {name:"XRP" , id:"xrp",  img:"images2/xrp-logo.png" , description:"", founder:"", whitePaper:"", released:"", symbol:""},
     { name: "Zcash", id: "zcash", img: "images2/zcash-logo.png", description: "Zcash is a cryptocurrency aimed at using cryptography to provide enhanced privacy for its users compared to other cryptocurrencies such as Bitcoin. Zcash is based on Bitcoin's codebase. It shares many similarities, such as a fixed total supply of 21 million units", founder: "Zooko Wilcox", whitePaper: "http://zerocash-project.org/media/pdf/zerocash-extended-20140518.pdf", released: "October 2016", symbol: "ZEC" }]
 
-    function sendEmail() {
-        Email.send({
-        Host: "smtp.gmail.com",
-        Username : "<sender’s email address>",
-        Password : "<email password>",
-        To : '<recipient’s email address>',
-        From : "<sender’s email address>",
-        Subject : "<email subject>",
-        Body : "<email body>",
-        }).then(
-            message => alert("mail sent successfully")
-        );
-    }
+
 //Search bar 
 
 var userInput = document.getElementById("Bar")
@@ -338,11 +326,12 @@ function loadPage(name) {
             let x = oldArray.find((e, index) => e.id === name)
             document.getElementById("individual-crypto").innerHTML = `
     <div class="card mx-auto" >
-        <div class="card-header mt-3"> 
-        <button class="btn-inline-block bg-info btn-lg col-2 mr-auto" onclick="left()" name="descending"><i class="fa fa-arrow-left fa-lg text-white"></i></button>
-        <button class="col-8 btn-lg   btn-inline-block btn-info  " onclick="randomCard()" >random</button>
-        <button class=" bg-info btn-inline-block btn-lg col-2 ml-auto" onclick="right()"> <i class="fa fa-arrow-right fa-lg text-white"></i>
-         </button></div>
+        <div class="card-header mt-3">
+        <div class="row mx-auto"> 
+        <button class="btn-inline-block bg-info btn-lg col-2" onclick="left()" name="descending"><i class="fa fa-arrow-left fa-lg text-white"></i></button>
+        <button class="col-7 btn-lg   btn-inline-block  btn-info  " onclick="randomCard()" >random</button>
+        <button class=" bg-info btn-inline-block btn-lg  col-2" onclick="right()"> <i class="fa fa-arrow-right fa-lg text-white"></i>
+         </button> </div> </div>
     <img class="card-img-top mt-5 col-4 col-sm-6 mx-auto mt-3" id="img" name="${x.name}"  src=${x.img}>
     <div class="card-body col-10 mx-auto">
     <h2 class="card-title text-center mb-3">${x.name}</h2>
